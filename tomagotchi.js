@@ -3,6 +3,8 @@ let hunger = 5;
 let sleepiness = 5;
 let boredom = 5;
 let age = 0;
+let status = 'Baby';
+const statArray = ['Baby', 'Tween', 'Grown-Up', 'Old-Timer'];
 
 //Add Name to the Tomagotchi
 const addName = () => {
@@ -95,23 +97,43 @@ const addBoredom = () => {
 
 addBoredom();
 
+
+//Add Status to the Tomagotchi
+
+const addStatus = () => {
+	const $statusDiv = $('<div>');
+	$statusDiv.text("Stage in Life: " + status);
+	$statusDiv.appendTo($('.tomagotchi'));
+	let statNum = 0
+	const timer = setInterval(() => {
+		statNum += 1;
+		status = statArray[statNum];
+		$statusDiv.text("Stage in Life: " + status);
+		if (statNum === 3){
+			clearInterval(timer);
+		}	
+	}, 60000);
+
+}
+
 //Add Age to the Tomagotchi
 
 const addAge = () => {
 	const $ageDiv = $('<div>');
 	$ageDiv.text("Age: " + age);
 	$ageDiv.appendTo($('.tomagotchi'));
+	addStatus();
 	const timer = setInterval(() => {
 		age += 1; 
 		$ageDiv.text("Age: " + age);
 		
 	}, 60000);
 
+
+
 }
 
 addAge();
-
-
 
 
 
