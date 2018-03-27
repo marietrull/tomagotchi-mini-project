@@ -1,0 +1,1 @@
+console.log("I am working on the tomagotchi mini-project.");
