@@ -23,9 +23,14 @@ const addHunger = () => {
 		hunger -= 1;
 		$hungerDiv.text("Hunger: " + hunger);
 	})
+	//Set Timer
 	const timer = setInterval(() => {
 		hunger += 1; 
 		$hungerDiv.text("Hunger: " + hunger);
+		if (hunger === 10){
+			clearInterval(timer);
+			window.alert("Your Tomogatchi starved and is now dead.");
+		}
 		
 	}, 60000);
 }
@@ -57,6 +62,10 @@ const addSleepy = () => {
 	const timer = setInterval(() => {
 		sleepiness += 1; 
 		$sleepyDiv.text("Sleepiness: " + sleepiness);
+		if (sleepiness === 10){
+			clearInterval(timer);
+			window.alert("Insomnia has driven your Tomagotchi mad.");
+		}
 	}, 60000);
 }
 
@@ -76,6 +85,10 @@ const addBoredom = () => {
 	const timer = setInterval(() => {
 		boredom += 1; 
 		$boredDiv.text("Boredom: " + boredom);
+		if (boredom === 10){
+			clearInterval(timer);
+			window.alert("Boredom has taken over your Tomagotchi - it isn't dead - but it might as well be.");
+		}
 	}, 60000);
 
 }
