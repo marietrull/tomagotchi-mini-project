@@ -23,6 +23,11 @@ const addHunger = () => {
 		hunger -= 1;
 		$hungerDiv.text("Hunger: " + hunger);
 	})
+	const timer = setInterval(() => {
+		hunger += 1; 
+		$hungerDiv.text("Hunger: " + hunger);
+		
+	}, 60000);
 }
 
 addHunger();
@@ -49,6 +54,10 @@ const addSleepy = () => {
 			$background.css('color', '#3d3d3d');
 		}
 	})
+	const timer = setInterval(() => {
+		sleepiness += 1; 
+		$sleepyDiv.text("Sleepiness: " + sleepiness);
+	}, 60000);
 }
 
 addSleepy();
@@ -64,6 +73,11 @@ const addBoredom = () => {
 		boredom -= 1;
 		$boredDiv.text("Boredom: " + boredom);
 	})
+	const timer = setInterval(() => {
+		boredom += 1; 
+		$boredDiv.text("Boredom: " + boredom);
+	}, 60000);
+
 }
 
 addBoredom();
