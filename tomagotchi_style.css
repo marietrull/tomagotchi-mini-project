@@ -13,3 +13,7 @@ div.tomagotchi {
 	background-color: white;
 	padding: 10px;
 }
+
+div.buttons {
+	border: 1px solid gray;
+}
