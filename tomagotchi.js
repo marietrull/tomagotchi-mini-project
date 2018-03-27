@@ -74,6 +74,12 @@ const addAge = () => {
 	const $ageDiv = $('<div>');
 	$ageDiv.text("Age: " + age);
 	$ageDiv.appendTo($('.tomagotchi'));
+	const timer = setInterval(() => {
+		age += 1; 
+		$ageDiv.text("Age: " + age);
+		
+	}, 60000);
+
 }
 
 addAge();
